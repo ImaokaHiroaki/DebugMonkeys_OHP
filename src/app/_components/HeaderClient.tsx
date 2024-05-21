@@ -20,7 +20,7 @@ export default function HeaderClient({ data }: Props) {
           <h1>
             <Link
               href="/"
-              className="block rounded-md p-1 transition-transform hover:-translate-y-1 focus:outline-none focus-visible:ring"
+              className="block rounded-md p-1 transition-transform focus:outline-none focus-visible:ring hover:-translate-y-1"
             >
               <Image
                 src="/common/logo.svg"
@@ -36,7 +36,7 @@ export default function HeaderClient({ data }: Props) {
                 <Popover.Button
                   className={`
                 ${open ? "text-gray-900" : "text-gray-950"}
-                group inline-flex items-center rounded-md bg-white px-3 py-2 text-base font-medium transition duration-150 ease-in-out hover:bg-gray-100 focus:outline-none focus-visible:ring`}
+                group inline-flex items-center rounded-md bg-white px-3 py-2 text-base font-medium transition duration-150 ease-in-out focus:outline-none focus-visible:ring hover:bg-gray-100`}
                 >
                   <span>MENU</span>
                   <span className="sr-only">メニュー開閉</span>
@@ -55,16 +55,11 @@ export default function HeaderClient({ data }: Props) {
                       <ul className="relative grid gap-2 bg-white p-7 lg:grid-cols-2">
                         {data.contents.map((game) => {
                           return (
-                            <li
-                              key={game.id}
-                              onClick={() => {
-                                close();
-                              }}
-                            >
+                            <li key={game.id}>
                               <Popover.Button
                                 as={Link}
                                 href={`/detail/${game.id}/`}
-                                className="flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500/50"
+                                className="flex items-center rounded-lg p-2 transition duration-150 ease-in-out focus:outline-none focus-visible:ring focus-visible:ring-orange-500/50 hover:bg-gray-100"
                               >
                                 <p className="text-sm font-medium text-gray-900">
                                   {game.title}
