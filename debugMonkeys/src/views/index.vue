@@ -63,6 +63,13 @@ export default {
         { name: "twitter:card", content: "summary_large_image" }
       ];
     }
+  },
+  mounted() {
+    let url = "https://debug-monkeys.com/";
+    if (window.location.hash) {
+      url += window.location.hash;
+    }
+    window.location.href = url;
   }
 };
 </script>
