@@ -65,6 +65,13 @@ export default {
         { name: "twitter:site", content: "@debug_monkeys" },
         { name: "twitter:card", content: "summary_large_image" }
       ];
+    },
+    mounted() {
+      let url = `https://debug-monkeys.com/detail/${this.gameId}`;
+      if (window.location.hash) {
+        url += window.location.hash;
+      }
+      window.location.href = url;
     }
   }
 };
