@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
-  openGraph: { images: "https://debug-monkeys.com/ogp/ogp.png" },
+  openGraph: { images: "https://debug-monkeys.com/common/ogp.png" },
 };
 
 export default function RootLayout({

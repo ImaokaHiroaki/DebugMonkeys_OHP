@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props) {
     title: `${data.title} | デバッグモンキーズ公式サイト`,
     description: `ボードゲーム「${data.title}」の紹介ページ。デバッグモンキーズは東京と福岡で活動しているボードゲーム制作団体です。代表作：エラロト / Qubism / ゾンビパニックとライフルおじさん / 鍋代官など`,
     openGraph: {
-      images: `https://debug-monkeys.com/ogp/ogp_${params.game}.jpg`,
+      images: data.thumb.url ?? "https://debug-monkeys.com/common/ogp.png",
     },
   };
 }
